@@ -6,6 +6,9 @@ import yfinance as yf
 import matplotlib.pyplot as plt
 import altair as alt
 
+# Set the page configuration
+st.set_page_config(page_title='Crossover MA Strategy Analysis', layout='wide')
+
 st.title('Crossover MA Strategy Analysis')
 st.write('This app performs a crossover moving average strategy analysis \
          comparing it with a buy and hold strategy.')
