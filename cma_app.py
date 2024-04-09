@@ -14,17 +14,17 @@ st.write('This app performs a crossover moving average strategy analysis \
          comparing it with a buy and hold strategy.')
 
 with st.sidebar:
-    st.header('Select ticker and date range')
+    st.header('⚙️ Select analysis parameters:')
     with st.form(key='parameters_form'):
         # Select the stock ticker
-        stock = st.text_input('Stock Ticker', 'GPS')
+        stock = st.text_input('💼 Stock ticker', 'GPS')
 
         # Select the start and end date
-        start = st.date_input('Start Date', pd.to_datetime('2018-01-01'))
-        end = st.date_input('End Date', pd.to_datetime(np.datetime64('today')))
+        start = st.date_input('📆 Start Date', pd.to_datetime('2018-01-01'))
+        end = st.date_input('📆 End Date', pd.to_datetime(np.datetime64('today')))
 
         # Define the initial capital
-        initial_capital = st.number_input('Initial Capital', 1000)
+        initial_capital = st.number_input('💵 Initial Capital', 1000)
 
         # Include an ENTER button
         submit_button = st.form_submit_button(label='Do the analysis!')
