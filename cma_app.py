@@ -17,14 +17,14 @@ with st.sidebar:
     st.header('⚙️ Select analysis parameters:')
     with st.form(key='parameters_form'):
         # Select the stock ticker
-        stock = st.text_input('💼 Stock ticker', 'GPS')
+        stock = st.text_input('💼 **Stock ticker**', 'GPS')
 
         # Select the start and end date
-        start = st.date_input('📆 Start Date', pd.to_datetime('2018-01-01'))
-        end = st.date_input('📆 End Date', pd.to_datetime(np.datetime64('today')))
+        start = st.date_input('📆 **Start date**', pd.to_datetime('2018-01-01'))
+        end = st.date_input('📆 **End date**', pd.to_datetime(np.datetime64('today')))
 
         # Define the initial capital
-        initial_capital = st.number_input('💵 Initial Capital', 1000)
+        initial_capital = st.number_input('💵 **Initial capital**', 1000)
 
         # Include an ENTER button
         submit_button = st.form_submit_button(label='Do the analysis!')
@@ -321,7 +321,7 @@ if submit_button:
                              ]}
 
     # Create a DataFrame
-    df = pd.DataFrame(data, index=['Final Value', 'Total return', 'Total return', 
+    df = pd.DataFrame(data, index=['Final Value', 'Total return ($)', 'Total return (%)', 
                                    'Mean daily return', 'Volatility',  'Sharpe ratio' 
                                    ])
 
