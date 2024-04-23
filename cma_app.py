@@ -15,8 +15,8 @@ st.set_page_config(page_title='Crossover Moving Average Strategy Analysis',
 margins_css = """
     <style>
         .main > div {
-            padding-left: 1rem;
-            padding-right: 0rem;
+            padding-left: 5rem;
+            padding-right: 5rem;
             padding-top: 2rem;
             padding-bottom: 2rem;
 
