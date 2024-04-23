@@ -11,15 +11,26 @@ st.set_page_config(page_title='Crossover Moving Average Strategy Analysis',
                     page_icon="📈",
                     layout='wide')
 
-# Set the page icon
+# Set up layout
+margins_css = """
+    <style>
+        .main > div {
+            padding-left: 1rem;
+            padding-right: 0rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
 
+        }
+
+    </style>
+"""
+st.markdown(margins_css, unsafe_allow_html=True)
 
 st.title('Crossover Moving Average Strategy Analysis')
 st.write('This app performs a crossover moving average strategy analysis \
          comparing it with a buy and hold strategy.')
 
 with st.sidebar:
-    st.header('⚙️ Select analysis parameters')
     with st.form(key='parameters_form'):
         # Select the stock ticker
         stock = st.text_input('💼 **Stock ticker**', 'GPS')
