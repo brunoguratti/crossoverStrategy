@@ -7,14 +7,19 @@ import matplotlib.pyplot as plt
 import altair as alt
 
 # Set the page configuration
-st.set_page_config(page_title='Crossover MA Strategy Analysis', layout='wide')
+st.set_page_config(page_title='Crossover Moving Average Strategy Analysis',
+                    page_icon="📈",
+                    layout='wide')
 
-st.title('📈 Crossover MA Strategy Analysis')
+# Set the page icon
+
+
+st.title('Crossover Moving Average Strategy Analysis')
 st.write('This app performs a crossover moving average strategy analysis \
          comparing it with a buy and hold strategy.')
 
 with st.sidebar:
-    st.header('⚙️ Select analysis parameters:')
+    st.header('⚙️ Select analysis parameters')
     with st.form(key='parameters_form'):
         # Select the stock ticker
         stock = st.text_input('💼 **Stock ticker**', 'GPS')
@@ -24,7 +29,7 @@ with st.sidebar:
         end = st.date_input('📆 **End date**', pd.to_datetime(np.datetime64('today')))
 
         # Define the initial capital
-        initial_capital = st.number_input('💵 **Initial capital**', 1000)
+        initial_capital = st.number_input('💵 **Initial capital**')
 
         # Include an ENTER button
         submit_button = st.form_submit_button(label='Do the analysis!')
@@ -172,7 +177,7 @@ if submit_button:
 
     # Combine charts
     final_chart = (legend_1 + line_chart + buy_signals + sell_signals).properties(
-        title=f'Long and short siginals for Crossover MA Strategy - {stock}').interactive()
+        title=f'Long and short siginals for Crossover Moving Average Strategy - {stock}').interactive()
 
     # Display chart in Streamlit
     st.altair_chart(final_chart, use_container_width=True)
@@ -285,7 +290,7 @@ if submit_button:
     sharpe_buy_hold = mean_buy_hold / std_buy_hold
 
     # Maximum drawdown
-    max_drawdown_crossover = (stock_data['Cumulative CMA Strategy Returns'] - 
+    max_drawdown_cross  over = (stock_data['Cumulative CMA Strategy Returns'] - 
                                     stock_data['Cumulative CMA Strategy Returns'].cummax()).min()
     max_drawdown_buy_hold = (stock_data['Cumulative Buy and Hold Strategy Returns'] - 
                                    stock_data['Cumulative Buy and Hold Strategy Returns'].cummax()).min()
