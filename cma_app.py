@@ -133,7 +133,7 @@ if submit_button:
 
     st.write(f"According to our calculations, the best short window is **{best_short}** days and \
              the best long window is **{best_long}** days. The crossover strategy is shown below \
-                for a initial capital of **${initial_capital}**. The :green[**green**] triangles indicate \
+                for a initial capital of **${initial_capital:,.2f}**. The :green[**green**] triangles indicate \
                     buy signals, while the :red[**red**] triangles indicate sell signals.")
 
     # Combine all necessary data into a single DataFrame for convenience
