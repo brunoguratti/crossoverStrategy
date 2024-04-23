@@ -290,7 +290,7 @@ if submit_button:
     sharpe_buy_hold = mean_buy_hold / std_buy_hold
 
     # Maximum drawdown
-    max_drawdown_cross  over = (stock_data['Cumulative CMA Strategy Returns'] - 
+    max_drawdown_cross_over = (stock_data['Cumulative CMA Strategy Returns'] - 
                                     stock_data['Cumulative CMA Strategy Returns'].cummax()).min()
     max_drawdown_buy_hold = (stock_data['Cumulative Buy and Hold Strategy Returns'] - 
                                    stock_data['Cumulative Buy and Hold Strategy Returns'].cummax()).min()
