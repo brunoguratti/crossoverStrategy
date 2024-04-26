@@ -2,6 +2,8 @@
 
 ![Demonstration of Crossover Moving Average Strategy](https://github.com/brunoguratti/crossoverStrategy/blob/d28c6b6ff0aee43533976830c30773e058f14abd/ezgif-5-2bba525652.gif)
 
+
+
 ## Introduction
 This Streamlit app is designed to showcase the Crossover Moving Average Strategy in financial markets. It provides a dynamic interface for users to interact with real-time data and visualize how the strategy performs under various conditions.
 
@@ -31,5 +33,5 @@ Contributions are welcome! For major changes, please open an issue first to disc
 ## Contact
 Bruno Guratti – brunoguratti@gmail.com
 
-Project Link: [https://github.com/yourusername/crossover-moving-average-app](https://github.com/yourusername/crossover-moving-average-app)
+App Link: [https://ma-strategy.streamlit.app/](https://ma-strategy.streamlit.app/)
 
